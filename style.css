@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-large: 36px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: var(--font-large);
+  font-weight: 600;
+}
+
+nav .share-btn {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  padding: 0.5rem 1.5rem;
+  background: none;
+  cursor: pointer;
+}
+
+nav .share-btn p {
+  margin-right: 1rem;
+}
