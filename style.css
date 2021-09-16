@@ -6,13 +6,27 @@
 
 :root {
   --font-large: 36px;
+  --font-medium: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --font-large: 24px;
+    --font-medium: 18px;
+  }
 }
 
 .container {
   max-width: 1280px;
   margin: auto;
-  padding: 1rem;
+  padding: 0 1rem;
   font-family: "Poppins", sans-serif;
+}
+
+.landing-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
@@ -24,7 +38,7 @@ nav {
 
 nav .logo {
   font-size: var(--font-large);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 nav .share-btn {
@@ -34,8 +48,53 @@ nav .share-btn {
   padding: 0.5rem 1.5rem;
   background: none;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 nav .share-btn p {
   margin-right: 1rem;
+  font-size: var(--font-medium);
+}
+
+.goto {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.goto h1 {
+  font-size: var(--font-large);
+  font-weight: 600;
+  text-align: center;
+}
+
+.goto a {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  box-shadow: 7px 7px 0 black;
+  color: black;
+  font-size: var(--font-medium);
+  border-radius: 5px;
+}
+
+.goto a:hover {
+  box-shadow: 5px 5px 0 black;
+  transition: all ease 75ms;
+}
+
+.goto svg {
+  animation: bounce 1s linear infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50%);
+  }
 }
